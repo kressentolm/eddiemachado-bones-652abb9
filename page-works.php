@@ -38,15 +38,13 @@
 										 $imageAlt = $imageArray['alt']; // Grab, from the array, the 'alt'
 										 $imageThumbURL = $imageArray['sizes']['bones-thumb-700']; //grab from the array, the 'sizes', and from it, the 'thumbnail'
 										 $imageCaption = $imageArray['caption'];	
-										 	if( $imageCaption ): ?>
-												<div class="wp-caption">					
-											<?php endif; ?>
-										    <img src="<?php echo $imageThumbURL;?>" alt="<?php echo $imageAlt; ?>">
-										</a>
-											<?php if( $imageCaption ): ?>
+										 	if( $imageCaption ): ?><div class="wp-caption"><?php endif; ?>
+											    <div class="overlay">											
+											    	<img src="<?php echo $imageThumbURL;?>" alt="<?php echo $imageAlt; ?>">				
 													<p class="wp-caption-text"><?php echo $imageCaption; ?></p>
 												</div>
-											<?php endif; ?>
+												</a>
+											</div>
 										<?php endwhile; ?>
 									<?php else: // no rows found ?>
 									<?php endif; ?>
@@ -60,15 +58,13 @@
 										 $imageAlt = $imageArray['alt']; // Grab, from the array, the 'alt'
 										 $imageThumbURL = $imageArray['sizes']['bones-thumb-700']; //grab from the array, the 'sizes', and from it, the 'thumbnail'
 										 $imageCaption = $imageArray['caption'];
-										 	if( $imageCaption ): ?>
-												<div class="wp-caption">
-											<?php endif; ?>
-										    <img src="<?php echo $imageThumbURL;?>" alt="<?php echo $imageAlt; ?>">
-										</a>
-											<?php if( $imageCaption ): ?>
+										 	if( $imageCaption ): ?><div class="wp-caption"><?php endif; ?>
+											    <div class="overlay">											
+											    	<img src="<?php echo $imageThumbURL;?>" alt="<?php echo $imageAlt; ?>">				
 													<p class="wp-caption-text"><?php echo $imageCaption; ?></p>
 												</div>
-											<?php endif; ?>										
+												</a>
+											</div>
 										<?php endwhile; ?>
 									<?php else: // no rows found ?>
 									<?php endif; ?>

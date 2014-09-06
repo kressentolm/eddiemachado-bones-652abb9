@@ -40,8 +40,7 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-
-
+		<div id="view">
 			<header class="header" role="banner">
 			<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 			<div class="h1 logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></div>

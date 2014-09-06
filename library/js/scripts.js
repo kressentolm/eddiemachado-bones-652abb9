@@ -146,7 +146,7 @@ $('#graphic-btn').click(function() {
   if ($('.graphic').is(':hidden')) {
     $('.fine').hide();
     $('.graphic').addClass("flexed"); 
-    $('.graphic').slideDown('slow'); 
+    $('.graphic').slideDown(); 
   } 
 });
 
@@ -155,7 +155,7 @@ $('#fine-btn').click(function() {
   $(this).addClass('active');
   if ($('.fine').is(':hidden')) {
     $('.graphic').hide();
-    $('.fine').slideDown('slow');
+    $('.fine').slideDown();
   } 
 });
 

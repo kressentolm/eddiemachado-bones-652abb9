@@ -1114,6 +1114,16 @@ Styling the toggled content.
   text-align: center;
 }
 
+.graphic, .fine {
+  width: 98%;
+  margin: auto;
+}
+
+.fine .overlay {
+  width: 90%;
+  margin: 0 auto 2em;
+}
+
 .toggle-display {
   display: none;
 }
@@ -1521,13 +1531,22 @@ style a page via class
 /*********************
 LAYOUT & GRID STYLES
 *********************/
+/* Fix for Safari issues */
+#view {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
 .wrap {
   width: 93%;
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto;
-  overflow: auto;
+  overflow: hidden;
 }
 
 /*********************
@@ -1775,7 +1794,7 @@ POSTS & CONTENT STYLES
 }
 .entry-content p {
   margin: 0 0 1.5em;
-  text-align: left;
+  text-align: center;
 }
 .entry-content p.image-description {
   padding: 0 1em;
@@ -1833,7 +1852,6 @@ POSTS & CONTENT STYLES
 .entry-content img {
   margin: 0 0 .9em 0;
   height: auto;
-  padding: 6px;
   width: 100%;
   box-shadow: inset 5px 6px 14px -7px rgba(0, 0, 0, 0.75);
 }
@@ -1866,26 +1884,63 @@ div.wpcf7 img.ajax-loader {
   max-width: 900px;
 }
 
-.wp-caption {
-  max-width: 100%;
+p {
+  /* end .wp-caption */
+}
+p .wp-caption {
+  width: 100%;
   text-align: center;
-  margin: 0 0 1em 0;
+  margin: 0 6px;
+  padding: 0;
   /* images inside wp-caption */
 }
-.wp-caption img {
-  height: auto;
+p .wp-caption img {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  margin: 0 1em 1em 0;
+  width: 100%;
+  z-index: -10;
 }
-.wp-caption p.wp-caption-text {
-  font-size: 0.85em;
-  margin: -1.25em 0 5em 0;
-  text-align: center;
-  color: #fff;
-}
-.wp-caption:last-child {
+p .wp-caption:last-child {
   margin: -1.5em 0 5em 0;
 }
 
-/* end .wp-caption */
+.overlay {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 0 2em 0;
+  color: #fff;
+  text-align: center;
+  width: 97%;
+}
+
+p.wp-caption-text {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background: black;
+  font-family: Arial;
+  z-index: 2;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  padding: 8px 0;
+  margin: 20px 0;
+  -webkit-transition: opacity 0.12s ease-in;
+  transition: opacity 0.12s ease-in;
+}
+
+.overlay:hover p.wp-caption-text {
+  opacity: 0.8;
+  filter: alpha(opacity=0.8);
+}
+
 /* image gallery styles */
 .gallery dt {
   float: none;
@@ -2185,15 +2240,22 @@ view.
 }
 
 /*********************
-MISC STYLES
+FLEX STYLES
 *********************/
 .flexed {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: baseline;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  /* Or do it all in one line with flex flow */
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  /* tweak the where items line up on the row */
+  /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+  -webkit-align-content: flex-end;
+  align-content: flex-end;
 }
 
 /*********************
@@ -2330,7 +2392,7 @@ tweeners.
     margin: 0 3%;
   }
   .entry-content img {
-    max-width: 80%;
+    max-width: 100%;
     box-shadow: inset 5px 6px 14px -7px rgba(0, 0, 0, 0.75);
   }
 
@@ -2549,6 +2611,10 @@ you can add resource intensive styles.
     text-align: center;
   }
 
+  .flexed .wp-caption {
+    width: 50%;
+  }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/
@@ -2581,11 +2647,6 @@ you can add resource intensive styles.
   .wp-caption {
     max-width: 100%;
   }
-  .wp-caption p.wp-caption-text {
-    font-size: 0.95em;
-    margin: -.5em 0 5em 0;
-    text-align: center;
-  }
 
   .button-wrapper .toggle-btn {
     max-width: 36%;
@@ -2612,6 +2673,10 @@ you can add resource intensive styles.
   .footer, .push {
     height: 3.5em;
     clear: both;
+  }
+
+  .overlay {
+    width: 95%;
   }
 }
 /*********************
@@ -2713,6 +2778,10 @@ you can add resource intensive styles.
    */
   .graphic .wp-caption {
     max-width: 33%;
+  }
+
+  .flexed .wp-caption {
+    width: 33%;
   }
 
   .footer .copyright {
