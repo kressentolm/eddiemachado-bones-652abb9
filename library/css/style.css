@@ -1527,7 +1527,7 @@ LAYOUT & GRID STYLES
   height: auto !important;
   height: 100%;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: auto;
 }
 
 /*********************
@@ -2187,6 +2187,15 @@ view.
 /*********************
 MISC STYLES
 *********************/
+.flexed {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

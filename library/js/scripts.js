@@ -145,15 +145,8 @@ $('#graphic-btn').click(function() {
   $(this).addClass('active');
   if ($('.graphic').is(':hidden')) {
     $('.fine').hide();
-    $('.graphic').slideDown('slow');
-      $('.graphic').css({
-      "display": "-webkit-box",  
-      "display": "flex", 
-      "flex-wrap": "wrap",
-      "flex-direction": "row",
-      "align-items": "baseline",
-      "justify-content": "center"
-    });
+    $('.graphic').addClass("flexed"); 
+    $('.graphic').slideDown('slow'); 
   } 
 });
 
