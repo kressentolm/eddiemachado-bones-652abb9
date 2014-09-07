@@ -2121,7 +2121,7 @@ COMMENT STYLES (currently disabled, keeping in case we want to put them back in 
 }
 
 /******************************************************************
-COMMENT FORM STYLES
+COMMENTS/FORM STYLES
 ******************************************************************/
 .comment-respond {
   padding: 1.5em;
@@ -2171,6 +2171,10 @@ COMMENT FORM STYLES
 /* no comments */
 .nocomments {
   margin: 0 20px 1.1em;
+}
+
+.wpcf7-form p {
+  text-align: left;
 }
 
 /*********************
