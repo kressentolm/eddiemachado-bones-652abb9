@@ -38,9 +38,8 @@
 		<?php // end analytics ?>
 
 	</head>
-
 	<body <?php body_class(); ?>>
-		<div id="view">
+	<div id="container" class="wrap cf">
 			<header class="header" role="banner">
 			<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 			<div class="h1 logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></div>
@@ -61,7 +60,7 @@
 			</nav>
 			<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 
-				<div id="inner-header" class="wrap cf">
+				<div id="inner-header" class="cf">
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
@@ -71,4 +70,4 @@
 				</div>
 
 			</header>
-		<div id="container" class="wrap cf">
+		<div class="inner-wrap">

@@ -1471,7 +1471,6 @@ GENERAL STYLES
 }
 
 html, body {
-  height: auto;
   height: 100%;
 }
 
@@ -1482,7 +1481,6 @@ body {
   line-height: 1.5;
   color: #fff;
   -webkit-font-smoothing: antialiased;
-  margin-bottom: 100px;
 }
 
 ul:before, li:before {
@@ -1541,12 +1539,11 @@ LAYOUT & GRID STYLES
 }
 
 .wrap {
-  width: 93%;
+  width: 100%;
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto;
-  overflow: hidden;
+  margin: 0 auto -3.5em;
 }
 
 /*********************
@@ -2206,7 +2203,6 @@ view.
 .footer {
   width: 100%;
   min-width: 300px;
-  float: left;
   background-color: #313131;
   color: #f8f9fa;
 }
@@ -2230,6 +2226,10 @@ view.
 }
 .contact li {
   font-size: .9em;
+}
+.contact li a {
+  padding-left: 3px;
+  text-decoration: none;
 }
 
 .social-icon {
@@ -2431,16 +2431,11 @@ tweeners.
     padding-left: 7%;
   }
 
-  .footer, .push {
-    height: 3.5em;
-    clear: both;
-  }
-
   .contact {
     text-align: center;
   }
   .contact li:first-child {
-    padding-right: 22px;
+    padding-right: 60px;
   }
 }
 /*********************
@@ -2674,11 +2669,6 @@ you can add resource intensive styles.
   }
 
   /* end .footer-links */
-  .footer, .push {
-    height: 3.5em;
-    clear: both;
-  }
-
   .overlay {
     width: 95%;
   }

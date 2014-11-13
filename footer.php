@@ -1,7 +1,6 @@
-		
+		</div> <!-- end of .inner-wrap container -->
+        <div class="push"></div>
 		</div> <!-- end of .wrap container -->
-
-		<div class="push"></div> 
 
 			<footer class="footer" role="contentinfo">
 
@@ -30,14 +29,12 @@
 					</p>
 					<ul class="contact m-1of2 t-1of3 d-1of3">
 						<li>M: 555.555.5555</li>
-						<li>E: jen@mitchell.com</li>
+						<li>E:<a href="mailto:jnn.mitchell@gmail.com">jnn.mitchell@gmail.com</a></li>
 					</ul>
 					<p class="source-org copyright m-none t-1of3 d-1of3">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 			 	</div>
 			</footer>
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
-		
-		</div> <!-- end of #view -->
 	</body>
 </html> <!-- end of site. what a ride! -->
